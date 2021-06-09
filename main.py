@@ -3,19 +3,23 @@
 import subject
 import teacher
 import department
+import university
 
 
 def main():
     teachers_names = ["Jucimar", "Elloá", "Edgard", "Sílvia Cristina", "Márcia"]
     department_names = ["EST", "ESA", "ESAT", "ENS", "ESO"]
     teachers_list = []
-    department_list = []
+    #department_list = []
+
+    universityname = university.University("Universidade do Estado do Amazonas")
 
     for i in range(5):
         teachers_list.append(teacher.Teacher(teachers_names[i], i + 1))
-        department_list.append(department.Department(department_names[i]))
+        #department_list.append(department.Department(department_names[i]))
+        #department_list.append(universityname.insert_department(department_names[i]))
         department_list[i].insert_teachers(teachers_list[i])
-
+        universityname.insert_department(department_list[i].name)
     subjects_names = ["LPC", "MD", "OAC", "Cálculo I", "PCA"]
     subjects_list = []
 
