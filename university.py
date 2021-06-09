@@ -1,4 +1,4 @@
-import departamento
+import department
 
 
 class University:
