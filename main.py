@@ -5,13 +5,13 @@ import teacher
 
 
 def main():
-    teachers_names = ["Jucimar", "Elloá", "Edgar", "Sílvia Cristina", "Márcia"]
+    teachers_names = ["Jucimar", "Elloá", "Edgard", "Sílvia Cristina", "Márcia"]
     teachers_list = []
 
     for i in range(5):
         teachers_list.append(teacher.Teacher(teachers_names[i], i + 1))
 
-    subjects_names = ["MD", "Cálculo I", "OAC", "PCA", "LPC I"]
+    subjects_names = ["LPC", "MD", "OAC", "Cálculo I", "PCA"]
     subjects_list = []
 
     for i in range(5):
@@ -24,11 +24,11 @@ def main():
 
     print("TEACHERS:")
     for i in range(5):
-        teachers_list[i].output_teacher()
+        print(teachers_list[i])
 
     print("\nSUBJECTS:")
     for i in range(5):
-        subjects_list[i].output_subject()
+        print(subjects_list[i])
 
 
 main()
