@@ -4,8 +4,10 @@ class Department:
         self.teacher_list = teacher_list
 
     def insert_teachers(self, teacher):
-        self.teacher_list.append(teacher)
+        self.teacher_list.add(teacher)
 
     def __str__(self):
-        return "%s [%s]" % (self.name, \
-            ", ".join([teacher.name for teacher in self.teacher_list]))
+        return "%s [%s]" % (
+            self.name,
+            ", ".join([teacher.name for teacher in self.teacher_list]),
+        )
