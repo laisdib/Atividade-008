@@ -1,5 +1,6 @@
 import department
 
+
 class University:
     def __init__(self, name):
         self.department_list = []
