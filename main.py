@@ -40,10 +40,12 @@ def main():
 
     for i in range(len(teachers_list)):
         # Add j subjects for the teacher in position i
-        for j in range(randint(1, len(subjects_list))):
+        times = randint(1, len(subjects_list))
+        while times:
             position = randint(0, len(subjects_list) - 1)
             teachers_list[i].add_subject(subjects_list[position])
             subjects_list[position].add_teacher(teachers_list[i])
+            times -= 1
 
     department_names = ["EST", "ESA", "ESAT", "ENS", "ESO"]
     university_object = University("Universidade do Estado do Amazonas")
@@ -51,10 +53,13 @@ def main():
     for i in range(len(department_names)):
         department_teachers = set()
         # Add j teachers for the department in position i
-        for j in range(randint(1, len(teachers_list))):
+        times = randint(1, len(teachers_list))
+        while times:
             department_teachers.add(
                 teachers_list[randint(0, len(teachers_list) - 1)]
             )
+            times -= 1
+
         university_object.insert_department(
             department_names[i], department_teachers
         )
